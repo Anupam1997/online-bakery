@@ -25,7 +25,6 @@ function ChartByOrderCount() {
       });
 
       setChartData(dates);
-      console.log(dates);
     } catch (error) {
       console.log(error);
     }
@@ -34,6 +33,8 @@ function ChartByOrderCount() {
   const series = Object.keys(chartData)?.map((key) => {
     return { name: key, data: chartData[key] };
   });
+
+  console.log(series);
 
   const options = {
     chart: {
@@ -72,7 +73,7 @@ function ChartByOrderCount() {
     yaxis: {
       labels: {
         formatter: function (val: any) {
-          return val.toFixed(0);
+          return (val / 1000000).toFixed(0);
         },
       },
       title: {
@@ -80,13 +81,13 @@ function ChartByOrderCount() {
       },
     },
     xaxis: {
-      type: "totalOrders",
+      type: "datetime",
     },
     tooltip: {
       shared: false,
       y: {
         formatter: function (val: any) {
-          return val.toFixed(0);
+          return (val / 1000000).toFixed(0);
         },
       },
     },
