@@ -17,7 +17,7 @@ function ChartByOrderCount() {
 
       let dates: any = {};
       Object.keys(data)?.map((key) => {
-        data[key].map(({ date, totalOrders }: any) => {
+        return data[key].map(({ date, totalOrders }: any) => {
           var innerArr = [new Date(date).getTime(), totalOrders];
           dates[key] = [];
           dates[key] = [...dates[key], innerArr];

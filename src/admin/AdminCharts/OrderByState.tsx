@@ -90,7 +90,7 @@ function OrderByState() {
         },
       },
     },
-    colors: ["#FFD700", "#32CD32", "#87CEEB", "#FF6347"],
+    colors: ["#FF5733", "#FFC300", "#335BFF", "#33FF57", "#C833FF"],
     title: {
       text: "Orders By order state",
       floating: true,

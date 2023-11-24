@@ -14,7 +14,6 @@ import { Product } from "../../Common";
 function ProductsPage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [categoryFilter, setCategoryFilter] = useState<string>("");
   const navigate = useNavigate();
   useEffect(() => {
     const fetchProducts = async () => {
@@ -24,7 +23,6 @@ function ProductsPage() {
           {
             params: {
               search: searchTerm,
-              category: categoryFilter,
             },
           }
         );
@@ -40,7 +38,7 @@ function ProductsPage() {
     };
 
     fetchProducts();
-  }, [searchTerm, categoryFilter]);
+  }, [searchTerm]);
 
   return (
     <div

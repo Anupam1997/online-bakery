@@ -1,19 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import { Product } from "../../Common";
-import {
-  Alert,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-  Snackbar,
-} from "@mui/material";
+import { Alert, Autocomplete, Snackbar, TextField } from "@mui/material";
 import axios from "axios";
 
 function OrderCheckout({
@@ -26,7 +18,7 @@ function OrderCheckout({
   product: Product;
 }) {
   const [message, setMessage] = useState("");
-  const [branch, setBranch] = useState("");
+  const [branch, setBranch] = useState<any>();
   const [branches, setBranches] = useState<any[]>([]);
 
   useEffect(() => {
@@ -48,8 +40,8 @@ function OrderCheckout({
 
     fetchBranches();
   }, []);
-  const handleChange = (event: SelectChangeEvent) => {
-    setBranch(event.target.value as string);
+  const handleChange = (val: any) => {
+    setBranch(val);
   };
 
   const createOrder = async () => {
@@ -57,7 +49,7 @@ function OrderCheckout({
     try {
       const { data } = await axios.post("http://localhost:5000/api/orders", {
         username,
-        branchId: branch,
+        branchId: branch.branchId,
         product: {
           product_id: product._id,
           name: product.name,
@@ -100,24 +92,18 @@ function OrderCheckout({
           }}
         >
           <h1>Price: &#8377;{product.price}</h1>
-          <FormControl fullWidth>
-            <InputLabel id="demo-simple-select-label">Branch</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={branch}
-              label="Branch"
-              onChange={handleChange}
-            >
-              {branches.map((branch: any) => {
-                return (
-                  <MenuItem key={branch.branchId} value={branch.branchId}>
-                    {`${branch.name}, ${branch.address}, ${branch.city}`}
-                  </MenuItem>
-                );
-              })}
-            </Select>
-          </FormControl>
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={branches}
+            fullWidth
+            value={branch}
+            onChange={(e, val) => handleChange(val)}
+            getOptionLabel={(branch) =>
+              `${branch.name}, ${branch.address}, ${branch.city}`
+            }
+            renderInput={(params) => <TextField {...params} label="Movie" />}
+          />
         </DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose}>

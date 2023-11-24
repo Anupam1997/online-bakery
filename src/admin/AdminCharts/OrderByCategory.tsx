@@ -84,6 +84,7 @@ function OrderByCategory() {
       axisTicks: {
         show: false,
       },
+
       labels: {
         show: true,
         formatter: function (val: any) {
@@ -91,6 +92,7 @@ function OrderByCategory() {
         },
       },
     },
+    colors: ["#D4A76A", "#E1C0A6", "#BF8C5F"],
     title: {
       text: "Orders By order category",
       floating: true,
