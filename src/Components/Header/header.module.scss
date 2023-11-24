@@ -1,0 +1,17 @@
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    background: linear-gradient(45deg, #e75480, #ad5389);
+    -webkit-background-clip: text;
+    color: transparent;
+height: 70px;
+padding: 20px 0px;
+margin-top: -10px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+}

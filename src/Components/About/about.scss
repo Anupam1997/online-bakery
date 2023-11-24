@@ -1,0 +1,49 @@
+.logo {
+    font-family: 'Pacifico', cursive;
+    background: linear-gradient(45deg, #e75480, #ad5389);
+    -webkit-background-clip: text;
+    color: transparent;
+height: 70px;
+padding: 20px 0px;
+margin-top: -10px;
+
+}
+
+.read_more {
+    width: 30%;
+    color: #fff !important;
+    float: left;
+    background-color: #fe6577 !important;
+    height: 50px;
+    font-size: 16pt;
+    margin-top: 20px;
+    border: 0px;
+    color: #fff;
+    margin: auto;
+    border-radius: 0px;
+    &:hover {
+      background-color: #fe6577;
+    }
+  }
+
+  @media only screen and (min-width: 280px) and (max-width: 599px) {
+    .read_more {
+    width: 75%;}
+  }
+
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .read_more {
+    width: 40%;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) { 
+    .read_more {
+    width: 50%;}
+
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    .read_more {
+    width: 35%;}
+  }

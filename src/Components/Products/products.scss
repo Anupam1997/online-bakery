@@ -1,0 +1,104 @@
+.logo {
+  font-family: "Pacifico", cursive;
+  background: linear-gradient(45deg, #e75480, #ad5389);
+  -webkit-background-clip: text;
+  color: transparent;
+  height: 70px;
+  padding: 20px 0px;
+  margin-top: -10px;
+}
+
+.goToProducts {
+  width: 30%;
+  color: #fff !important;
+  float: left;
+  background-color: #fe6577 !important;
+  height: 50px;
+  font-size: 16pt;
+  margin-top: 20px;
+  border: 0px;
+  color: #fff;
+  margin: auto;
+  border-radius: 0px !important;
+  &:hover {
+    background-color: #fe6577;
+  }
+}
+
+.add-to-cart {
+  color: #fff !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  background-color: #fe6577 !important;
+  font-size: 16pt;
+  border: 0px;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 50px !important;
+  border-bottom-left-radius: 20px !important;
+  border-top-left-radius: 50px !important;
+  color: #fff;
+
+  &:hover {
+    background-color: #fe6577;
+  }
+}
+
+#product-page {
+  font-family: "Poppins", sans-serif;
+
+  .product-desc {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .product-heading {
+    font-size: 40px;
+    font-weight: 800;
+  }
+}
+#product-card {
+  .product-price {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 0px;
+  }
+
+  .product-name {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .star-rating {
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    line-height: unset !important;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 280px) and (max-width: 599px) {
+  .goToProducts {
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .goToProducts {
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .goToProducts {
+    width: 50%;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .goToProducts {
+    width: 35%;
+  }
+}
