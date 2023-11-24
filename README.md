@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+Online Bakery App
+Overview
+Welcome to the Online Bakery App! This web application is built using React with TypeScript, Bootstrap, SCSS, and Material-UI (MUI). It provides a user-friendly interface for customers to browse bakery products, add items to their cart, and place orders online.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Screenshots
 
-## Available Scripts
+![Homepage](/Screenshots/HomePage.png)
+![Product Page](/Screenshots/ProductGoto.png)
 
-In the project directory, you can run:
+![Admin Dashboard](/Screenshots/adminDashboard.png)
 
-### `npm start`
+Features
+Responsive Design: The app is designed to work seamlessly across various devices, including desktops, tablets, and mobile phones.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Product Catalog: Browse a wide variety of bakery products, each with detailed descriptions and images.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Products  List Page](/Screenshots/ProdcutListPage.png)
 
-### `npm test`
+User Authentication: Secure user authentication ensures that customers can create accounts, log in, and track their order history.
+![Login  Page](/Screenshots/Login.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Order Placement: Customers can place orders with ease, specifying delivery details and any special instructions.
 
-### `npm run build`
+![Login  Page](/Screenshots/ProductInfo.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Prerequisites
+Make sure you have the following installed before running the application:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Node.js
+npm
+Installation
+Clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+git clone https://github.com/your-username/online-bakery-app.git
+```
 
-### `npm run eject`
+Navigate to the project directory:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+cd online-bakery-app
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm install
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Usage
+Start the development server:
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Open your browser and visit http://localhost:3000.
+
+Explore the Online Bakery App!
+
+Tech Stack
+React: A JavaScript library for building user interfaces.
+TypeScript: Adds static typing to JavaScript, improving code quality and developer productivity.
+Bootstrap: A popular CSS framework for building responsive and visually appealing web pages.
+SCSS: A preprocessor scripting language that is interpreted or compiled into CSS.
+Material-UI (MUI): A React UI framework that implements Google's Material Design.
+Folder Structure
+src: Contains the source code of the React application.
+components: Reusable React components.
+pages: Individual pages of the application.
+styles: SCSS files for styling.
+utils: Utility functions.
